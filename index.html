@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Famouse: Tic-Tac-toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Tic-tac-toe</h1>
+    </div>
+
+    <div class="game-container">
+        <div class="cell bl bt"></div>
+        <div class="cell bt"></div>
+        <div class="cell bt br"></div>
+        <div class="cell bl"></div>
+        <div class="cell"></div>
+        <div class="cell br"></div>
+        <div class="cell bl bb"></div>
+        <div class="cell bb"></div>
+        <div class="cell bb br"></div>
+    </div>
+    <div class="reset">
+        <button id="reset_btn" class="game-restart" onclick="reset()">Restart Game</button>
+    </div>
+
+    <script src="tic_tac.js"></script>
+    
+</body>
+</html>
