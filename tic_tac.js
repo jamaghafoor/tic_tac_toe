@@ -29,7 +29,7 @@ let checkForwin = () => {
     win.forEach(element => {
         if ((cells[element[0]].innerText === cells[element[1]].innerText) && (cells[element[1]].innerText === cells[element[2]].innerText) && (cells[element[0]].innerText !== '')) {
             setTimeout(() => {
-                respons('Congratulation!🎉', cells[element[0]].innerText, 'images/thumbs_up.gif');
+                respons('Congratulation!🎉', cells[element[1]].innerText, 'images/thumbs_up.gif');
                 reset();
             }, 300);
             turn = 'X';
@@ -38,7 +38,7 @@ let checkForwin = () => {
                 setTimeout(() => {
                     respons('Game Draw!', 'No one', 'images/sad.gif');
                     reset()
-                }, 500);
+                }, 200);
                 turn = 'X';
             }
         }
@@ -46,10 +46,10 @@ let checkForwin = () => {
 }
 
 //win alert function
-function respons(fp, zx, img) {
+function respons(result, XorO, img) {
     Swal.fire({
-        title: fp,
-        text: `${zx} has won the game`,
+        title: result,
+        text: `${XorO} has won the game`,
         imageUrl: img,
         imageWidth: 300,
         imageHeight: 200,
@@ -62,4 +62,3 @@ function reset() {
         element.innerText = '';
     })
 }
-
